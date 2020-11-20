@@ -25,13 +25,17 @@ public class RealNumber{
     return new RealNumber(getValue() / other.getValue());
   }
 
-
-
   public boolean equals(RealNumber other){
-     return true;
-   }
+    if (getValue() == 0 || other.getValue() == 0){
+      return (getValue() == other.getValue());
+    }
+    double difference = Math.abs(subtract(other).getValue());
+    double average = add(other).getValue() / 2;
+    double percentDifference = difference / average;
+    return percentDifference <= .001;
+  }
 
   public String toString(){
-    return ""+value;
+    return "" + value;
   }
 }
