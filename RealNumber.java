@@ -1,4 +1,5 @@
 public class RealNumber{
+
   private double value;
 
   public RealNumber(double v){
@@ -38,4 +39,5 @@ public class RealNumber{
   public String toString(){
     return "" + value;
   }
+  
 }
